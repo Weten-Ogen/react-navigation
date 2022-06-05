@@ -14,7 +14,7 @@ fs.readdirSync(packages).forEach((name) => {
 
   if (fs.statSync(path.join(packages, name)).isDirectory()) {
     const pak = JSON.parse(
-      fs.readFileSync(path.join(dir, 'package.json'), 'utf8')
+      fs.readFileSync(path.join(dir,'package.json'), 'utf8')
     );
 
     if (pak.types && !fs.existsSync(path.join(dir, pak.types))) {
